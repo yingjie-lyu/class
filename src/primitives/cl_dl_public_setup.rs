@@ -225,9 +225,9 @@ impl CLGroup {
     }
 }
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct PK(BinaryQF);
+pub struct PK(pub BinaryQF);
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct SK(BigInt);
+pub struct SK(pub BigInt);
 
 impl From<SK> for BigInt {
     fn from(sk: SK) -> Self {
